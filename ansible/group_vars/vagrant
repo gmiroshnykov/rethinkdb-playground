@@ -1,0 +1,6 @@
+inventory_hosts:
+  interface: eth1
+
+rethinkdb:
+  config:
+    bind: all

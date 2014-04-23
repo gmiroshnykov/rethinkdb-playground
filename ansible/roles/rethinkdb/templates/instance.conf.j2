@@ -1,0 +1,11 @@
+{% for k, v in rethinkdb.config.iteritems() %}
+{% if v != "" %}
+{{ k }}={{ v }}
+{% endif %}
+{% endfor %}
+
+{% for host in groups['rethinkdb'] %}
+{% if host != inventory_hostname %}
+join={{ host }}:29015
+{% endif %}
+{% endfor %}

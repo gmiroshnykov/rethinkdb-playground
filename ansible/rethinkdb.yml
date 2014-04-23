@@ -1,0 +1,4 @@
+- hosts: rethinkdb
+  roles:
+    - rethinkdb
+

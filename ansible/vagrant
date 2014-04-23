@@ -1,0 +1,11 @@
+[rethinkdb]
+db1.rethinkdb.dev
+db2.rethinkdb.dev
+db3.rethinkdb.dev
+
+[all:vars]
+ansible_connection = ssh
+ansible_ssh_user = vagrant
+
+[vagrant:children]
+rethinkdb

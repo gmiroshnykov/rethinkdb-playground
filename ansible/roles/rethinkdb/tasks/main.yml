@@ -1,0 +1,19 @@
+- name: add PPA
+  sudo: true
+  apt_repository: >
+    repo=ppa:rethinkdb/ppa
+    update_cache=yes
+
+- name: install package
+  sudo: true
+  apt: pkg=rethinkdb
+
+- name: generate instance.conf
+  sudo: true
+  template: >
+    src=instance.conf.j2
+    dest=/etc/rethinkdb/instances.d/instance.conf
+    owner=root
+    group=root
+    mode=0644
+  notify: restart rethinkdb

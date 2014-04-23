@@ -1,0 +1,3 @@
+- name: start procps
+  sudo: true
+  service: name=procps state=started

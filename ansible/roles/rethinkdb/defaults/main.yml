@@ -1,0 +1,4 @@
+rethinkdb:
+  config:
+    bind: 127.0.0.1
+    machine-name: '{{ ansible_hostname }}'
