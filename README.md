@@ -1,6 +1,9 @@
 RethinkDB Playground
 ====================
 
+Experimenting with RethinkDB cluster setup.
+
+
 Requirements
 ------------
 
